@@ -22,7 +22,7 @@ jobs:
         run: npm ci
       - name: Run Tests
         run: npm t
-      - name: Release
+      - name: Create Release
+        uses: ridedott/release-me-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
